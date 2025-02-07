@@ -6,6 +6,7 @@ import "./HTMLCarousel.css";
 
 function InfoCarousel() {
   //console.log(carouselData);
+  //this is a comment
   return (
     <Carousel>
       {carouselData.map((item, index) => (
