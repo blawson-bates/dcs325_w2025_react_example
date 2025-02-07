@@ -4,7 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function NavBar() {
+type NavBarProps = {
+  toggleFunction: (which) => void;
+};
+
+function NavBar({ toggleFunction }: NavBarProps) {
   const [clickCount, setClickCount] = useState(0); // init clickCount is 0
 
   const handleClick = () => {
@@ -15,7 +19,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="https://www.bates.edu">
           <img
             src="./src/images/bobcat.png"
             width="80"
@@ -27,7 +31,13 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" onClick={handleClick}>
+            <Nav.Link
+              href="#home"
+              onClick={() => {
+                handleClick();
+                toggleFunction();
+              }}
+            >
               HTML
             </Nav.Link>
 

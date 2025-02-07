@@ -1,16 +1,15 @@
 import Carousel from "react-bootstrap/Carousel";
 import ExampleCarouselImage from "components/ExampleCarouselImage";
 
+import "./HTMLCarousel.css";
+
 function HTMLCarousel() {
   return (
     <Carousel>
       <Carousel.Item>
-        {
-          //<ExampleCarouselImage text="First slide" />
-        }
         <img
           className="d-block w-100"
-          src="https://bit.ly/dcs325_black_panther_img"
+          src="./src/images/bg_green.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -19,18 +18,22 @@ function HTMLCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        {
-          //<ExampleCarouselImage text="Second slide" />
-        }
+        <img
+          className="d-block w-100"
+          src="./src/images/bg_pink.jpg"
+          alt="Second slide"
+        />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        {
-          //        <ExampleCarouselImage text="Third slide" />
-        }
+        <img
+          className="d-block w-100"
+          src="./src/images/bg_teal.jpg"
+          alt="Third slide"
+        />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
